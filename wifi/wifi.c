@@ -392,7 +392,7 @@ int wifi_load_hotspot_driver()
         usleep(200000);
     }
     property_set(AP_DRIVER_PROP_NAME, "timeout");
-    wifi_unload_driver();
+    wifi_unload_hotspot_driver();
     return -1;
 #endif
 }

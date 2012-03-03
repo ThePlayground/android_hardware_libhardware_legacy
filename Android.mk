@@ -22,6 +22,10 @@ include $(SAVE_MAKEFILES)
 
 LOCAL_MODULE:= libhardware_legacy
 
+ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
+    LOCAL_CFLAGS += -DQCOM_HARDWARE
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 
 # static library for librpc
